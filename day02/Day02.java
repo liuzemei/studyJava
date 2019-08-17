@@ -157,8 +157,85 @@ public class Day02 {
         } else {
             System.out.println("猜错了，再接再厉");
         }
+    }
 
+    public static void chargeSeason() {
+        // 1. 创建一个mounth变量 用来存储一个月份值（Scanner）
+        Scanner input = new Scanner(System.in);
+        System.out.println("请输入您要查询的月份");
+        int mouth = input.nextInt(); // 帮我们读取输入的数字
+        switch (mouth) {
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("春天");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("夏天");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("秋天");
+                break;
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("冬天");
+                break;
+            default:
+                System.out.println("输入内容有误");
+        }
+    }
 
+    private static void lession5() {
+        /**
+         * 循环结构  for  while  do..while
+         * for循环 注意：如果在for()的括号里面初始化的变量，在循环结束的时候就被销毁了。
+         */
+//        for (int round = 1; ; round++) {
+//            System.out.println("跑到第" + round + "圈啦");
+//        }
+
+        /**
+         * 应用题： 操场上有一百多人  让他们排队  三个人一组  多一个， 四个人一组 多两个，五个人一组 多两个 问操场上的人数多少？
+         */
+
+        int peopleTotal = 100;
+        for (; peopleTotal < 200; peopleTotal++) {
+            if (peopleTotal % 3 == 1 && peopleTotal % 4 == 2 && peopleTotal % 5 == 2) {
+                System.out.println("操场上一共有" + peopleTotal + "人");
+            }
+        }
+    }
+
+    public static void lession6() {
+        /**
+         * 数组（容器）
+         * 数组是一组数据类型相同的数据的组合， 将这些数据统一的管理起来
+         * 数组是一个引用数据类型，数组内存储的类型可以是基本类型 也可以是引用类型
+         *
+         * 1. 数组的定义（声明）
+         *      数据类型[] 数组名字;
+         *      int[] x;
+         *      char[] y;
+         *      boolean[] z;
+         *      String[] m;
+         * 2. 数组的赋值（初始化）
+         *      静态初始化   有长度  有元素
+         *          int[] array = new int[]{10,20,30,40,50};
+         *          int[] array = {10,20,30,40,50}; // ok --> 只有在初始化的时候可以省略 new int[]
+         *          int[] array;
+         *          array = {10,20} // error
+         *
+         *      动态初始化
+         * 3. 数组的访问
+         * 4. 数组元素的遍历（轮询）
+         *
+         */
+        int[] array = new int[]{1, 2, 3, 4, 5};
     }
 }
 
